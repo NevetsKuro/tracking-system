@@ -33,7 +33,17 @@ router.post('/add', async (req, res) => {
     console.log(u);
     res.send(`${u.name} saved to user collection`).end();
   });
+});
+
+router.delete('/remove', async (req, res) => {
+  const body = req.body;
+  const op = await User.deleteOne({ userid: body.id });
+  if (op.n > 0) {
+    res.json({ message: "Successfully Deleted User" });
+  }
+  res.json({ message: "Failed to Delete User" });
 
 });
+
 
 module.exports = router;

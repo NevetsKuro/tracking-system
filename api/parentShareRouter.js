@@ -18,9 +18,9 @@ router.post('/add', async (req, res) => {
     parent2: body.p2,
     parent3: body.p3,
   };
-  let option = { upsert: true };
-
-  ReferralShare.update({ _id: '60b49f9a4001ec32c0ebdd54' }, referralshare, option, function (err, u) {
+  let option = { upsert: true, setDefaultsOnInsert: true }
+  let id = '60b49f9a4001ec32c0ebdd54';
+  ReferralShare.update({ _id: id }, referralshare, option, function (err, u) {
     if (err) return res.json(err).end();
     res.send(`Successfully updated collection`).end();
   });

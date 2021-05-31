@@ -1,6 +1,6 @@
 {
   "name": "task-101",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "to-do task",
   "main": "server.js",
   "scripts": {
