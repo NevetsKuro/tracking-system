@@ -1,0 +1,21 @@
+{
+  "name": "task-101",
+  "version": "1.0.0",
+  "description": "to-do task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "steven",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12",
+    "nodemon": "^2.0.7"
+  }
+}
