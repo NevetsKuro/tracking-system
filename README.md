@@ -7,7 +7,7 @@ git clone https://github.com/stark1996/tracking-system.git
 
 npm install
 
-node server js
+node server.js
 ```
 
 ## API & Models
