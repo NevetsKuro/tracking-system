@@ -10,7 +10,8 @@ app.get('/', (req, res) => { res.send("Server is on!").end(); });
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-const uri = "mongodb+srv://steven:Steven1996@cluster0.9vg9o.mongodb.net/tracking-system?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://<username>:<password>@cluster0.9vg9o.mongodb.net/tracking-system?retryWrites=true&w=majority";
+const uri = "mongodb+srv://<username>:<password>@cluster0.9vg9o.mongodb.net/tracking-system?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 require('./models/user');
