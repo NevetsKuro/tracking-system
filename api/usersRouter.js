@@ -15,7 +15,7 @@ router.get('/find', async (req, res) => {
 
 router.post('/add', async (req, res) => {
   const body = req.body;
-  console.log(body);
+  // console.log(body);
   const user = await User.find().sort({ created_at: -1 }).limit(3)
 
   let useradd = new User({
@@ -30,7 +30,7 @@ router.post('/add', async (req, res) => {
 
   useradd.save(function (err, u) {
     if (err) return res.json(err);
-    console.log(u);
+    // console.log(u);
     res.send(`${u.name} saved to user collection`).end();
   });
 });
